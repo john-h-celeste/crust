@@ -20,3 +20,5 @@ buildall () {
         build "$f"
     done
 }
+
+mkdir -p week1 week2 week3 week4 week5 week6
