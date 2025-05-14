@@ -3,7 +3,7 @@ mkcd () {
 }
 
 build () {
-    g++ "$1" -o "$(realpath "$1").exe"
+    g++ "$1" -o "$(realpath "$1").exe" 2>&1
 }
 
 run () {
@@ -16,8 +16,14 @@ run () {
 
 buildall () {
     for f in `find | grep \\.cpp$`; do
-        echo "$f"
-        build "$f"
+        echo -n "$f"
+        build "$f" > "$f.log"
+        if [ $? -eq 0 ]; then
+            rm "$f.log"
+            echo # add newline
+        else
+            echo " - error"
+        fi
     done
 }
 
