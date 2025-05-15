@@ -27,4 +27,11 @@ buildall () {
     done
 }
 
+clean () {
+    for f in `find | grep "\\.log$\\|\\.exe$"`; do
+        echo "$f"
+        rm "$f"
+    done
+}
+
 mkdir -p week1 week2 week3 week4 week5 week6
