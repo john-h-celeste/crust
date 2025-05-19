@@ -34,4 +34,4 @@ clean () {
     done
 }
 
-mkdir -p week1 week2 week3 week4 week5 week6
+mkdir -p 1 2 3 4 5 6
