@@ -28,8 +28,8 @@ resultkeys = {}
 # for every key the autograding reporter uses:
 for k,v in steps[-1]['env'].items():
     # make sure it matches one of the steps
-    assert any(f'${{{{steps.{step["id"]}.outputs.result}}}}' == v for step in steps[1:-1])
-    resultkeys[[step['id'] for step in steps[1:-1] if step['id'] in v][0]] = k
+    assert any(v == f'${{{{steps.{step["id"]}.outputs.result}}}}' for step in steps[1:-1])
+    resultkeys[[step['id'] for step in steps[1:-1] if v == f'${{{{steps.{step["id"]}.outputs.result}}}}'][0]] = k
 
 # make a copy of the original workflow except for the jobs
 new = copy.deepcopy(data)
