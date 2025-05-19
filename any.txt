@@ -1,3 +1,6 @@
 toward a trustful and energy efficient communication in autonomous systems using blockchain related technologies
 equal / equivalent
 git status add commit push
+https://bastian.rieck.me/blog/2015/postincrement_vs_preincrement/
+https://web3.14159.annwfn.net/
+https://hmpg.net/
