@@ -34,4 +34,9 @@ clean () {
     done
 }
 
+day () {
+    # the number of day folders that have been created
+    ls -d */*/ | wc -l
+}
+
 mkdir -p 1 2 3 4 5 6
