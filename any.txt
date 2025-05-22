@@ -4,3 +4,4 @@ git status add commit push
 https://bastian.rieck.me/blog/2015/postincrement_vs_preincrement/
 https://web3.14159.annwfn.net/
 https://hmpg.net/
+http://www.catb.org/~esr/faqs/things-every-hacker-once-knew/
