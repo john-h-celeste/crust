@@ -3,26 +3,36 @@ mkcd () {
 }
 
 build () {
-    g++ "$1" -o "$(realpath "$1").exe" 2>&1
+    g++ "$1" $(if [ -f "$1.dep" ]; then cat "$1.dep"|while read line; do echo "$(dirname "$1")/$line"; done; fi) -o "$1.exe" 2>&1
 }
 
 run () {
-    if [ "$1" -nt "$(realpath "$1").exe" ]; then
-        build "$1" && "$(realpath "$1").exe"
+    if [ "$1" -nt "$1.exe" ]; then
+        build "$1"
     else
-        "$(realpath "$1").exe"
+        cat "$1.dep"|while read line; do 
+            if [ "$(dirname "$1")/$line" -nt "$1.exe" ]; then
+                build "$1"
+                break
+            fi
+        done
     fi
+    "$(realpath "$1").exe"
 }
 
 buildall () {
     for f in `find | grep \\.cpp$`; do
-        echo -n "$f"
-        build "$f" > "$f.log"
-        if [ $? -eq 0 ]; then
-            rm "$f.log"
-            echo # add newline
+        if [ -f "$f.lib" ]; then
+            :;
         else
-            echo " - error"
+            echo -n "$f"
+            build "$f" > "$f.log"
+            if [ $? -eq 0 ]; then
+                rm "$f.log"
+                echo # add newline
+            else
+                echo " - error"
+            fi
         fi
     done
 }
