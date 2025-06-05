@@ -12,3 +12,9 @@ udon vrchat
 https://github.com/bootchk/resynthesizer
 https://logarithmic.net/pfh/tpog
 https://github.com/AcChosen/VR-Stage-Lighting
+https://fasterthanli.me/articles/pin-and-suffering
+https://rust-lang.github.io/async-book/04_pinning/01_chapter.html
+https://blog.cloudflare.com/pin-and-unpin-in-rust/
+https://hashrust.com/blog/moves-copies-and-clones-in-rust/
+https://doc.rust-lang.org/std/pin/
+https://stackoverflow.com/questions/28595117/why-can-we-use-stdmove-on-a-const-object#comment45543410_28595117
