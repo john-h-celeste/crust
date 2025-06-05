@@ -9,3 +9,6 @@ https://dl.acm.org/doi/10.1145/3689746
 https://geo-ant.github.io/blog/2025/rust-testability-and-non-send-types/
 https://apnews.com/article/crypto-bitcoin-kidnapping-wrench-attack-ddc7263c25ba590f85648e1682576971?utm_source=firefox-newtab-en-us
 udon vrchat
+https://github.com/bootchk/resynthesizer
+https://logarithmic.net/pfh/tpog
+https://github.com/AcChosen/VR-Stage-Lighting
