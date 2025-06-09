@@ -20,3 +20,5 @@ https://doc.rust-lang.org/std/pin/
 https://stackoverflow.com/questions/28595117/why-can-we-use-stdmove-on-a-const-object#comment45543410_28595117
 https://github.com/PixiEditor/PixiEditor
 https://github.com/Sergio0694/ComputeSharp
+https://github.com/vrcx-team/VRCX
+https://github.com/SpecialKO/SpecialK
