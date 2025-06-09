@@ -10,12 +10,14 @@ run () {
     if [ "$1" -nt "$1.exe" ]; then
         build "$1"
     else
-        cat "$1.dep"|while read line; do 
-            if [ "$(dirname "$1")/$line" -nt "$1.exe" ]; then
-                build "$1"
-                break
-            fi
-        done
+        if [ -a "$1.dep" ]; then
+            cat "$1.dep"|while read line; do 
+                if [ "$(dirname "$1")/$line" -nt "$1.exe" ]; then
+                    build "$1"
+                    break
+                fi
+            done
+        fi
     fi
     "$(realpath "$1").exe"
 }

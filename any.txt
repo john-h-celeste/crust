@@ -22,3 +22,5 @@ https://github.com/PixiEditor/PixiEditor
 https://github.com/Sergio0694/ComputeSharp
 https://github.com/vrcx-team/VRCX
 https://github.com/SpecialKO/SpecialK
+you should show what you can do before showing how tbh
+like show the builtin classes/types before how to make your own
