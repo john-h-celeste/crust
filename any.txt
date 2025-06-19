@@ -49,3 +49,6 @@ void allocn(int n, llistnode *a) {
     llistnode b = {a, 0};
     allocn(n - 1, &b);
 }
+
+if you delete polymorphically without a virtual destructor, you summon the dreaded specter of "undefined behavior," a specter I personally would rather not meet in even a moderately well-lit alley, thank you very much
+    - herb sutter, http://www.gotw.ca/publications/mill18.htm
